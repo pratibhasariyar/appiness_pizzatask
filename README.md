@@ -1,10 +1,10 @@
-This project is build in Angular 9. There are two component one is 'order-list' and another is 'order-detail'.
+This project is built in Angular 9. There are two component one is 'order-list' and another is 'order-detail'.
 
 Order list take the info from a constant exportable json array and display info like Customer Name, No. of Items ordered, Total Amount of the Order, Status of the Order and 
 state changing button. 
 This button change the status to 'Preparing' and 'Ready to serve' based on previous state. This functionality is done using switch case. Another thing is that when the status is 'Ready to serve' then we have nothing to change so I have disabled to button using ngClass.
 
-Another part is when you click on any oder the respective order details will open in 'order-detail' component. This is done using query params, route and activate route. This component displays Items Name, Price, Total Price, Customer Name and Delivery Address.
+Another part is when you click on any oder the respective order details will open in 'order-detail' component. This is done using query params, route and activate route. This 'order-detail' component displays Items Name, Price, Total Price, Customer Name and Delivery Address.
 
 # PizzaTask
 
