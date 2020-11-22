@@ -6,6 +6,8 @@ This button change the status to 'Preparing' and 'Ready to serve' based on previ
 
 Another part is when you click on any oder the respective order details will open in 'order-detail' component. This is done using query params, route and activate route. This 'order-detail' component displays Items Name, Price, Total Price, Customer Name and Delivery Address.
 
+Also added both pages screenshots png files.
+
 # PizzaTask
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
