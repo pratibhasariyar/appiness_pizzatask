@@ -1,0 +1,39 @@
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Items Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Total Price</th>
+            <th scope="col">Customer name</th>
+            <th scope="col">Delivery Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+        <tr *ngFor="let item of requiredOrder.items;">
+            <td>{{item.name}}</td>
+        </tr>
+        </td>
+        <td>
+            <tr *ngFor="let item of requiredOrder.items;">
+                <td>{{item.price | currency}}</td>
+            </tr>
+        </td>
+
+        <td>
+            {{requiredOrder.amount | currency}}
+        </td>
+        <td>{{requiredOrder.customerName | titlecase}}</td>
+        <td>
+            <tr><td>Hno.: {{requiredOrder.address.hno}}</td></tr>
+            <tr><td>Street: {{requiredOrder.address.street}}</td></tr>
+            <tr><td *ngIf="requiredOrder.address.landmark">Landmark: {{requiredOrder.address.landmark}}</td></tr>
+            <tr><td>District: {{requiredOrder.address.district}}</td></tr>
+            <tr><td>State: {{requiredOrder.address.state}}</td></tr>
+            <tr><td>Zipcode: {{requiredOrder.address.zipcode}}</td></tr>
+            
+        </td>
+        </tr>
+    </tbody>
+</table>

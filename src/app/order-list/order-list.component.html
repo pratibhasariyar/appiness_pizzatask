@@ -1,0 +1,29 @@
+
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">S.No.</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">No. of Items</th>
+                <th scope="col">Total Amount</th>
+                <th scope="col">Order Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let order of ordersInfo; let i=index;" (click)="goToOrderDetails(order.customerName)">
+                <th scope="row">{{i+1}}</th>
+                <td>{{order.customerName | titlecase}}</td>
+                <td>{{order.items.length}}
+                </td>
+                <td>
+                    {{order.amount | currency}}
+                </td>
+                <td>
+                    {{order.orderStatus}}
+                </td>
+                <td>
+                    <button type="button" class="btn btn-info" (click)="changeStatus(i)" [ngClass]="{'disabled': order.orderStatus === 'Ready to serve'}">Change Status</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
